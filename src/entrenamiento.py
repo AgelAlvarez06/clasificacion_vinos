@@ -14,6 +14,10 @@ warnings.filterwarnings('ignore')
 data_path = Path(__file__).parent.parent / "WineQT.csv"
 df = pd.read_csv(data_path)
 
+# Eliminar columna 'Id' si existe
+if 'Id' in df.columns:
+    df = df.drop('Id', axis=1)
+
 print("=" * 80)
 print("ENTRENAMIENTO DEL MODELO - CLASIFICACIÓN DE VINOS")
 print("=" * 80)

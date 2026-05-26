@@ -22,6 +22,10 @@ print("\n✓ Modelo cargado correctamente")
 data_path = Path(__file__).parent.parent / "WineQT.csv"
 df = pd.read_csv(data_path)
 
+# Eliminar columna 'Id' si existe
+if 'Id' in df.columns:
+    df = df.drop('Id', axis=1)
+    
 # Usar últimas 10 muestras para prueba
 X_test_sample = df.drop('quality', axis=1).iloc[-10:]
 y_test_sample = df['quality'].iloc[-10:]

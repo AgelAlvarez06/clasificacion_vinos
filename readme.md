@@ -49,7 +49,7 @@ clasificacion_vinos/
 ### 1. Clonar o descargar el proyecto
 
 ```bash
-git clone 
+git clone https://github.com/AgelAlvarez06/clasificacion_vinos.git
 ```
 
 ### 2. Crear un entorno virtual (recomendado)
